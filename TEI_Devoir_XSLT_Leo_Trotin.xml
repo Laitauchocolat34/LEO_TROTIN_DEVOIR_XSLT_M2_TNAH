@@ -1,0 +1,464 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title level="a">exemplum</title>
+            <title level="u"> de la moniale chaste mais bavarde</title>
+            <author>D'auteurs divers</author>
+            <respStmt>
+               <resp>Encodage par</resp>
+               <persName>Léo Trotin</persName>
+            </respStmt>
+         </titleStmt>
+         <publicationStmt>
+            <p n="1">
+               Édition dans le cadre du master "Technologies numériques
+               appliquées à l'histoire" de l'École nationale des chartes.
+            </p>
+            <p n="2">
+               Ce travail se situe dans la continuité de notre travail de recherche de Master.
+               Nous avons comme objetif final de réaliser l'édition "critique" d'un
+               exemplum très présent dans notre corpus de mémoire. Il s'agit du récit de la moniale chaste mais bavarde dont le corps finit en partie brûlé. 
+               Le travail d'XML TEI étant contraint à cinq textes et n'ayant pas le temps de réaliser le modélisation des différentes variantes du texte,
+               vous trouverez pour le moment sur ces pages qu'une simple édition électronique des cinq récits utilisés.
+            </p>
+         </publicationStmt>
+         <sourceDesc>
+            <listWit>
+               <witness xml:id="Dialogus">
+                  <bibl>
+                     <author>Grégoire le Grand</author>
+                     <title type="main">Dialogues</title>
+                     <date>593-594</date>
+                     <bibl>
+                        <title type="sub">Dialogues. Tome III, Livre IV</title>
+                        <editor role="scientific_editor">
+                           <name>
+                              <forename>Adalbert</forename>
+                              <surname>De Vogüé</surname>
+                           </name>
+                        </editor> et
+                        <editor>
+                           <name role="translator">
+                              <forename>Paul</forename>
+                              <surname>Antin</surname>
+                           </name>
+                        </editor>,
+                        <pubPlace>Paris</pubPlace>
+                        <publisher>Cerf</publisher>
+                        <date>1980</date>
+                        <biblScope unit="page">p. 178-179</biblScope>
+                        <ref target="https://www.sudoc.fr/000322326">Lien vers le Sudoc</ref>
+                     </bibl>
+                  </bibl>
+               </witness>
+               <witness xml:id="Collectio">
+                  <bibl>
+                     <author>Anonyme</author>,
+                     <title type="main">Collectio exemplorum cisterciensis</title>
+                     <date>1200-1225</date>
+                     <bibl>
+                        <title n="sub">Collectio exemplorum cisterciensis in codice Parisiensi 15912 asseruata</title>
+                        <editor role="scientific_editor">
+                           <name>
+                              <forename>Jacques</forename>
+                              <surname>Berlioz</surname>
+                           </name>
+                        </editor>
+                        <editor>
+                           <name role="scientific_editor">
+                              <forename>Marie-Anne</forename>
+                              <surname>Polo de Beaulieu</surname>
+                           </name>
+                        </editor>,
+                        <pubPlace>Turnhout</pubPlace>
+                        <publisher>Brepols</publisher>
+                        <date>2012</date>
+                        <biblScope unit="page">p. 251</biblScope>.
+                        <ref target="https://www.sudoc.fr/159717353">Lien vers le Sudoc</ref>
+                     </bibl>
+                  </bibl>
+               </witness>
+               <witness xml:id="Sermones">
+                  <bibl>
+                     <author>Jacques de Vitry</author>
+                     <title type="main">Sermones vulgares</title>
+                     <date>1200-1240</date>
+                     <bibl>
+                        <title type="sub">The exempla, or Illustrative stories from the sermones vulgares</title>
+                        <editor role="scientific_editor">
+                           <name>
+                              <forename>Thomas Frederick</forename>
+                              <surname>Crane</surname>
+                           </name>
+                        </editor>
+                        <pubPlace>London</pubPlace>
+                        <publisher>D. Nutt</publisher>
+                        <date>1890</date>
+                        <biblScope unit="page">p. 113-114</biblScope>
+                        <ref target="https://www.sudoc.fr/066485568">Lien vers le Sudoc</ref>
+                     </bibl>
+                  </bibl>
+               </witness>
+               <witness xml:id="Fabulae">
+                  <bibl>
+                     <author>Odo de Cheriton</author>
+                     <title type="main">Fabulae et Parabolae</title>
+                     <date>1219-1221</date>
+                     <bibl>
+                        <title type="sub">Les Fabulistes latins depuis le siècle d'Auguste jusqu'à la fin du moyen âge : Etudes de Cheriton et ses dérivés</title>
+                        <editor role="scientific_editor">
+                           <name>
+                              <forename>Léopold</forename>
+                              <surname>Hervieux</surname>
+                           </name>
+                        </editor>
+                        <pubPlace>Paris</pubPlace>
+                        <publisher>Didot</publisher>
+                        <date>1896</date>
+                        <biblScope unit="page">p. 267</biblScope>
+                        <ref target="https://www.sudoc.fr/186724608">Lien vers le Sudoc</ref>
+                     </bibl>
+                  </bibl>
+               </witness>
+               <witness xml:id="Dialogus_miraculorum">
+                  <bibl>
+                     <author>Césaire de Heisterbach</author>
+                     <title type="main">Dialogus miraculorum</title>
+                     <date>1219-1223</date>
+                     <bibl>
+                        <title type="sub">Dialogus miraculorum</title>
+                        <editor role="scientific_editor">
+                           <name>
+                              <forename>Joseph</forename>
+                              <surname>Strange</surname>
+                           </name>
+                        </editor>
+                        <pubPlace>Coloniae</pubPlace>
+                        <publisher>J. M. Heberle</publisher>
+                        <date>1851</date>,
+                        <biblScope unit="page">p. 193</biblScope>
+                        <ref target="https://www.sudoc.fr/085299421">Lien vers le Sudoc</ref>
+                     </bibl>
+                  </bibl>
+               </witness>
+            </listWit>
+         </sourceDesc>
+      </fileDesc>
+     <encodingDesc>
+        <variantEncoding method="double-end-point" location="internal"/>
+     </encodingDesc>
+     <profileDesc>
+        <particDesc>
+           <listPerson>
+              <person xml:id="Gregoire">
+                 <persName>Grégoire le Grand</persName>
+                 <persName>Gregorii</persName>
+                 <persName>gregorius</persName>
+                 <note>Grégoire Ier, était un pape de l'Église catholique romaine qui a exercé son pontificat du 3 septembre 590 jusqu'à sa mort le 12 mars 604. 
+                    Il est souvent considéré comme l'un des plus grands papes de l'histoire de l'Église et est vénéré comme un saint dans le christianisme.
+                    Grégoire le Grand a produit une variété d'œuvres écrites qui ont eu une influence significative sur la théologie chrétienne, la pastorale et la liturgie. 
+                 </note>
+              </person>
+              <person xml:id="Felix">
+                 <persName>Felix de Porto</persName>
+                 <note>Nous n'avons pas trouvé d'informations sur cette personne. </note>
+              </person>
+           </listPerson>
+        </particDesc>
+        <settingDesc>
+           <listPlace>
+              <place xml:id="monastere">
+                 <placeName>Monastère</placeName>
+                 <placeName>monasterii</placeName>
+                 <note>Un monastère est un ensemble de bâtiments où vit une communauté religieuse de moines ou de moniales.</note>             
+              </place>
+              <place xml:id="eglise">
+                 <placeName>Eglise</placeName>
+                 <placeName>ecclesiae</placeName>
+                 <placeName>ecclesie</placeName>
+                 <placeName>ecclesiam</placeName>
+                 <placeName>ecclesia</placeName>
+                 <note>Une église est un lieu de culte dont le rôle principal est de faciliter le rassemblement d'une communauté chrétienne. 
+                    Sa construction est commanditée par le clergé, financée par les dons des laïcs, réalisée par les artistes et artisans</note>
+              </place>
+              <place xml:id="autel">
+                 <placeName>Autel</placeName>
+                 <placeName>altare</placeName>
+                 <note>Les lieux les plus importants de la géographie biblique sont ceux où Dieu s’est manifesté. Dans le  C'est comme déploiement universel de ce lieu archétypal - un autel et un sépulcre qui est une porte vers le ciel - que se construisent les églises chrétiennes. 
+                    Le sacrifice du Christ qui renouvelle l'Alliance, l'eucharistie, est rejoué quotidiennement sur tous les autels de toutes les églises chrétiennes. S'y opère un double mouvement ascendant et descendant : les offrandes des fidèles se transforment en biens immatériels pour monter vers Dieu, tandis que Dieu descend dans la matière en s'incarnant dans les espèces.
+                    Le processus par lequel Dieu se rend présent sur l'autel de la Nouvelle alliance et trône au milieu de son peuple, fait de l'autel le centre de la spatialisation du sacré.</note>
+              </place>
+           </listPlace>
+           <setting>
+              <ab xml:id="Dialogues">
+                 <term>Dialogues</term>
+                 <term>Dialogo</term>
+                 <note>Les Dialogues, rédigés en 593-594, et destinés prioritairement aux moines, visent à refonder la vie des clercs, des laïcs mais aussi des rois sur les normes que Grégoire a connues lors de son ancienne vie monastique.
+                    Les thèmes chers à Grégoire sont la lutte contre la simonie, contre le nicolaïsme sous toutes ses formes, notamment par le contact trop proche entre clercs et moniales, la volonté d'exclure les laïcs de la gestion de l'Église, le respect de la hiérarchie et enfin la moralisation de la société</note>     
+              </ab>
+              <ab xml:id="nuit">
+                 <term>Nuit</term>
+                 <term>nocte</term>
+                 <note>La nuit, on craint le diable, les brigands, les revenants, les sorcières et les loups-garous. Rixes, homicides, conspirations, adultères et viols ne sont pas rares</note>
+              </ab>
+              <ab xml:id="revelation">
+                 <term>Révélation</term>
+                 <term>reuelationem</term>
+                 <note>La révélation implique un processus continu au cours du temps historique et place la connaissance de Dieu en regard de ses créatures. 
+                    Dieu emploie la révélation pour faire percevoir à ses créatures l’ordonnancement du monde, son « dessein » ou plan divin, qui leur permet de se préparer à la révélation de l’Apocalypse, accomplissement dernier et récapitulatif de la fin des temps.</note>
+              </ab>
+              <ab xml:id="Destruction_corps">
+                 <term>Bruler</term>
+                 <term>illius igne cremabatur</term>
+                 <term>corporeo fuisset igne concremata</term>
+                 <note>Le péché est capable de modifier l’apparence du corps de manière à ce qu’elle se conforme à la disposition intérieure. Le péché est ici la source du mal physique. 
+                    Cette modification de la forme du corps est souvent mise en rapport avec la possession démoniaque qui est en quelque sorte le prototype de la maladie. </note>
+              </ab>
+              <ab xml:id="sexualite">
+                 <term>Sexualité</term>
+                 <term>carnis quidem continentiam</term>
+                 <term>virgine</term>
+                 <term>virginitas</term>
+                 <note>Au Moyen Âge, à partir de la réforme grégorienne, la luxure fut considérée comme le péché le plus scandaleux et répréhensible chez les ecclésiastiques, symbolisant, chez eux, la trahison de leur mission auprès des fidèles et, plus généralement, la désobéissance à Dieu. 
+                    Ainsi, le fait qu'elle ne tombe pas dans la luxure souligne en partie sa croyance en Dieu.</note>
+              </ab>
+              <ab xml:id="defunctum">
+                 <term>Défunt</term>
+                 <term>defuncta</term>
+                 <note>Derrière le mot defunctum il y a une certaine idée de déplacement, de placement ou de contact entre le corps et un objet ou un endroit spécifique. Le terme peut être employé pour désigner des corps morts placés par des vivants dans un contenant particulier comme un cercueil ou encore un tonneau. 
+                    Il arrive également que ce mot soit utilisé pour désigner une dépouille mise en terre ou placée dans un espace de vie humain. </note>
+              </ab>
+              <ab xml:id="feu">
+                 <term>Feu</term>
+                 <term>flammae</term>
+                 <note>Le feu est lié, dans la culture chrétienne savante et dans les récits folkloriquesdont les fidèles étaient friands, au châtiment éternel, à la vindicta infligée par un Dieu justicier aux pécheurs endurcis, </note>
+              </ab>
+           </setting>
+        </settingDesc> 
+     </profileDesc>
+  </teiHeader>
+  <text>
+      <body>
+         <div n="1">
+            <div>
+               <head>Dialogus</head>
+               <p>
+                  <anchor xml:id="source_start"/>Vir namque uitae uenerabilis<persName ref="#Felix"> Felix, Portuensis</persName> episcopus, in Sabinensi prouincia ortus atque enutritus est.<anchor xml:id="source_end"/>
+                  <anchor xml:id="statut_moral1_start"/> Qui quamdam sanctimonialem feminam in loco eodem fuisse testatur,<anchor xml:id="statut_moral_1nd"/>
+                  <anchor xml:id="statut_moral2_start"/> quae <term ref="#sexualite">carnis</term> quidem continentiam habuit,<anchor xml:id="statut_moral2_end"/><anchor xml:id="statut_moral3_start"/>
+                   sed linguae procacitatem atque stultiloquium non declinauit.<anchor xml:id="statut_moral3_end"/><anchor xml:id="statut_moral4_start"/><anchor xml:id="statut_moral4_end"/>
+                  <anchor xml:id="sepulture_start"/> Haec igitur<term ref="#defunctum"> defuncta</term> atque in<placeName ref="#eglise"> ecclesia</placeName> sepulta est.<anchor xml:id="sepulture_end"/><anchor xml:id="gardien_start"/><term ref="#nuit"> Nocte</term> autem eadem
+                  <anchor xml:id="gardien_end"/><anchor xml:id="gardien2_start"/> eiusdem<placeName ref="#eglise"> ecclesiae</placeName> custos<anchor xml:id="gardien2_end"/><anchor xml:id="gardien3_start"/><term ref="#revelation">per reuelationem</term><anchor xml:id="gardien3_end"/>
+                  <anchor xml:id="gardien4_start"/> uidit quia deducta ante sacrum<placeName ref="#autel"> altare</placeName> per medium secabatur,<anchor xml:id="gardien4_end"/><anchor xml:id="gardien5_start"/> <term ref="#Destruction_corps">illius igne cremabatur</term>, pars autem altera intacta remanebat.
+                  Cumque hoc surgens mane fratribus narraret<anchor xml:id="gardien6_end"/><anchor xml:id="gardien7_start"/> locum uellet ostendere in quo fuerat igne consumpta,<anchor xml:id="gardien7_end"/><anchor xml:id="preuve_start"/> ipsa<term ref="#feu"> flammae</term> conbustio ita ante<placeName ref="#autel"> altare</placeName> in marmoribus apparuit,<anchor xml:id="preuve_end"/>
+                  <anchor xml:id="preuve2_start"/> ac si illic eadem femina corporeo fuisset igne concremata.<anchor xml:id="preuve2_end"/><anchor xml:id="morale_start"/> Ex qua re aperte datur intellegi quia hii, quibus dimissa peccata non fuerint, ad euitandum iudicium sacris locis post mortem non ualent adiuuari.
+                  <anchor xml:id="morale_end"/>
+               </p>
+            </div>
+            <div>
+               <head>Collectio exemplorum cisterciensis</head>
+               <p>
+                  De <term ref="#Dialogues">Dialogo</term> <persName ref="#Gregoire">Gregorii</persName>. Quedam sanctimonialis <term ref="#sexualite">carnis</term> sue quidem continentiam habens, lingue sue procacitatem atque stultiloquium non declinauit. 
+                  Hec igitur <term ref="#defunctum">defuncta</term> atque in <placeName ref="#eglise">ecclesia</placeName> sepulta est. <term ref="#nuit">Nocte</term> uero eadem, eiusdem <placeName ref="#eglise">ecclesie</placeName> custos <term ref="#revelation">per reuelationem</term> uidit quod deducta ante sacrum <placeName ref="#autel">altare</placeName>per medium secabatur et pars una <term ref="#Destruction_corps">illius igne cremabatur</term>, pars autem altera in tacta manebat.
+                  Cuius <term ref="#feu">flamme</term> combustio ita ante <placeName ref="#autel">altare</placeName> in marmoribus apparuit ac si illic eadem femina corporeo fuisset igne <term ref="#feu">cremata</term>.
+               </p>
+            </div>
+            <div>
+               <head>Sermones vulgares</head>
+               <p>
+                  De quadam vero <term ref="#sexualite">virgine</term> narrat <persName ref="#Gregoire">Gregorius</persName>, que superba fuerat et garrula, quod ipsa mortus et sepulta, custos <placeName ref="#monastere">monasterii</placeName> vidit de <term ref="#nuit">nocte</term> demones ipsam ex tumulo extrahentes, qui a renibus supra comburebant corpus ejus, a renibus infra integrum remanebat, ita quod in mane cinis super pavimentum et vestigia <term ref="#feu">combustionis</term> apparuerunt.
+                  Patet igitur quod <term ref="#sexualite">virginitas</term> sine humilitate est quasi lampas sine oleo ; subtrahe oleum lampas non lucet ; tolle humilitatem castitas non placet.  
+               </p>
+            </div>
+            <div>
+               <head>Fabulae et Parabolae</head>
+               <p>
+                  Quedam monialis, valde litigiosa dum uixerat, post mortem in <placeName ref="#eglise">ecclesia</placeName> sepulta est. In <term ref="#nuit">nocte</term> sequenti custos <placeName ref="#eglise">ecclesie</placeName> per <term ref="#revelation">reuelationem</term> uidit eam ante <placeName ref="#autel">altare</placeName> per medium siccari. 
+                  Media pars <term ref="#Destruction_corps">igne cremabatur</term>, altera pars intacta remanebat. Cum custos <placeName ref="#eglise">ecclesie</placeName> narraret hec altera die et ostenderet locum ipsius <term ref="#feu">flamme</term>, combusto apparuit hac si fuisset igne materiali <term ref="#feu">cremata</term>.
+               </p>
+            </div>
+            <div>
+               <head>Dialogus miraculorum</head>
+               <p>
+                  Dicam vobis rem terribilem, quae meis temporibus in villa mea contigit. Erat ibi puella quaedam bene nata, et divitum filia, sed ita iracunda, ita contentiosa atque clamosa, ut ubicunque esset, sive in domo, sive in <placeName ref="#eglise">ecclesia</placeName>, ibi rixas suscitaret, odia nutriret, et beatum se iudicaret, qui evadere posset flagellum linguae illius. 
+                  Tandem <term ref="#defunctum">defuncta</term> est, et in atrio <placeName ref="#eglise">ecclesiae</placeName> sepulta. Mane venientes ad <placeName ref="#eglise">ecclesiam</placeName>, vidimus tumbam eius ad instar fornacis fumum eructuantem. Unde exterriti, et videre volentes quid hoc portenderet, terram eiecimus; et ecce, medietatem corporis superiorem ignis consumserat, inferior vero pars ab umbelico et deinceps illaesa apparuit.
+               </p>
+            </div>
+         </div>
+      </body>
+     <back>
+        <div type="apparatus">
+           <p>
+            <app from="#source_start" to="#source_end">
+               <lem wit="#Dialogus">Vir namque uitae uenerabilis Felix Portuensis episcopus in Sabinensi prouincia ortus atque enutritus est</lem>
+               <rdg wit="#Collectio">De Dialogo Gregorii</rdg>
+               <rdg wit="#Sermones"/>
+               <rdg wit="#Fabulae">narrat Gregorius</rdg>
+               <rdg wit="Dialogus_miraculorum">Dicam vobis rem terribilem quae meis temporibus in villa mea contigit</rdg>
+            </app>
+            <app from="#statut_moral1_start" to="#statut_moral1_end">
+               <lem wit="#Dialogus">Qui quamdam sanctimonialem feminam in loco eodem fuisse testatur</lem>
+               <rdg wit="#Fabulae">De quadam vero virgine</rdg>
+               <rdg wit="#Dialogus_miraculorum">Erat ibi puella quaedam bene nata et divitum filia</rdg>
+            </app>
+            <app from="#statut_moral2_start" to="#statut_moral2_end">
+               <lem wit="#Dialogus">quae carnis quidem continentiam habuit</lem>
+               <rdg wit="#Sermones"/>
+               <rdg wit="Fabulae"/>
+               <rdg wit="#Dialogus_miraculorum"/>
+            </app>
+            <app from="#statut_moral3_start" to="#statut_moral3_end">
+               <lem wit="#Dialogus">sed linguae procacitatem atque stultiloquium non declinauit</lem>
+               <rdg wit="Fabulae">valde litigiosa dum uixerat</rdg>
+            </app>         
+            <app from="#statut_moral4_start" to="statut_moral4_end">
+               <lem wit="#Dialogus"/>
+               <rdg wit="#Collectio"/>
+               <rdg wit="#Sermones"/>
+               <rdg wit="#Fabulae"/>
+               <rdg wit="#Dialogus_miraculorum">ut ubicunque esset, sive in domo sive in ecclesia, ibi rixas suscitaret odia nutriret et beatum se iudicaret qui evadere posset flagellum linguae illius</rdg>
+            </app>           
+            <app from="#sepulture_start" to="#sepulture_end">
+               <lem wit="#Dialogus">Haec igitur defuncta atque in ecclesiasepulta est</lem>
+               <rdg wit="#Sermones">quod ipsa mortus et sepulta</rdg>
+            </app>
+            <app from="#gardien_start" to="#gardien_end">
+               <lem wit="#Dialogus">Nocte autem eadem</lem>
+               <rdg wit="#Sermones"/>
+               <rdg wit="Fabulae">In noctesequenti</rdg>
+               <rdg wit="#Dialogus_miraculorum">Mane venientes ad ecclesiam</rdg>
+            </app>
+            <app from="#gardien2_start" to="#gardien2_end">
+               <lem wit="#Dialogus">eiusdem ecclesiae custos</lem>
+               <rdg wit="#Sermones">custos monasterii</rdg>
+               <rdg wit="#Dialogus_miraculorum"/>
+            </app>
+            <app from="#gardien3_start" to="#gardien3_end">
+               <lem wit="#Dialogus">per reuelationem</lem>
+               <rdg wit="#Sermones"/>
+               <rdg wit="#Dialogus_miraculorum"/>
+            </app>
+            <app from="#gardien4_start" to="#gardien4_end">
+               <lem wit="#Dialogus">uidit quia deducta ante sacrum altare per medium secabatur</lem>
+               <rdg wit="#Sermones">vidit de nocte demones ipsam ex tumulo extrahentes</rdg>
+               <rdg wit="#Fabulae">uidit eam ante altare per medium siccari</rdg>
+               <rdg wit="#Dialogus_miraculorum">vidimus tumbam eius ad instar fornacis fumum eructuantem</rdg>
+            </app>           
+            <app from="#gardien5_start" to="#gardien5_end">
+               <lem wit="#Dialogus">et pars una</lem>
+               <rdg wit="#Sermones">qui a renibus supra</rdg>
+               <rdg wit="#Fabulae"></rdg>
+               <rdg>
+                  <app from="gardien6_start" to="gardien6_end">
+                     <rdg wit="#Dialogus_miraculorum">Unde exterriti et videre volentes quid hoc portenderet terram eiecimus et ecce</rdg>
+                  </app>
+               </rdg>
+            </app>           
+            <app from="gardien5.1_start" to ="gardien5.1_end">
+               <lem wit="#Dialogus">illius igne cremabatur</lem>
+            </app> 
+            <app from="gardien5.2_start" to="gardien5.2_end">
+               <lem wit="#Dialogus">pars autem</lem>
+               <rdg wit="#Sermones">a renibus infra</rdg>
+               <rdg wit="#Fabulae"></rdg>
+               <rdg wit="#Dialogus_miraculorum"></rdg>
+            </app>        
+            <app from="gardien5.3_start" to="#gardien5.3_end">
+               <lem wit="#Dialogus">altera intacta remanebat</lem>
+            </app>           
+            <app from="#gardien6_start" to="#gardien6_end">
+               <lem wit="#Dialogus">Cumque hoc surgens mane fratribus narraret </lem>
+               <rdg wit="#Collectio"/>
+               <rdg wit="#Vulgares">ita quod in mane</rdg>
+               <rdg wit="#Fabulae">Cum custos ecclesienarraret hec altera die</rdg>
+               <rdg wit="#Dialogus_miraculorum">
+                  <app from="#gardien5_start" to="#gardien5_end">
+                     <rdg>medietatem corporis superiorem ignis</rdg>
+                  </app>
+                  <app from="gardien5.1_start" to ="gardien5.1_end">
+                     <rdg wit="#Collectio">rien</rdg>
+                  </app> 
+                  <app from="gardien5.2_start" to="gardien5.2_end">
+                     <rdg>inferior vero pars ab umbelico et deinceps</rdg>
+                  </app> 
+                  <app from="gardien5.3_start" to="#gardien5.3_end">
+                  </app>
+               </rdg>
+            </app>          
+            <app from="#gardien7_start" to="#gardien7_end">
+               <lem wit="#Dialogus">locum uellet ostendere in quo fuerat igne consumpta</lem>
+               <rdg wit="#Collectio"/>
+               <rdg wit="#Sermones"/>
+               <rdg wit="#Dialogus_miraculorum"/>
+            </app>  
+            <app from="#preuve_start" to="#preuve_end">
+               <lem wit="#Dialogus">ipsa conbustio ita ante altare in marmoribus apparuit</lem>
+               <rdg wit="#Sermones">cinis super pavimentum et vestigia combustionis apparuerunt.</rdg>
+               <rdg wit="#Fabulae">combusto apparuit</rdg>
+               <rdg wit="#Dialogus_miraculorum/"/>
+            </app>
+            <app from="#preuve2_start" to="#preuve2_end">
+               <lem wit="#Dialogus">ac si illic eadem femina corporeo fuisset igne concremata</lem>
+               <rdg wit="#Sermones"/>
+               <rdg wit="#Dialogus_miraculorum"/>
+            </app>       
+            <app from="#morale_start" to="#morale_end">
+               <lem wit="#Dialogus">Ex qua re aperte datur intellegi quia hii quibus dimissa peccata non fuerint ad euitandum iudicium sacris locis post mortem non ualent adiuuari</lem>
+               <rdg wit="#Collectio"/>
+               <rdg wit="#Sermones">Patet igitur quod virginitas sine humilitate est quasi lampas sine oleo subtrahe oleum lampas non lucet tolle humilitatem castitas non placet</rdg>
+               <rdg wit="#Fabulae"/>
+               <rdg wit="#Dialogus_miraculorum"/>
+            </app>
+           </p>
+        </div>
+        <div n="2">
+           <div>
+              <head>Dialogus</head>
+              <p>
+                 Le vénérable <persName ref="#Felix">Félix</persName>, évêque de Porto, est né dans le district de Sabine et y a été élevé. Il dit avoir connu une religieuse dans ce pays qui était <term ref="#sexualite">continente</term>, assurément, mais qui n'évitait pas l'agressivité de la langue et le vain bavardage. 
+                 <term ref="#defunctum">Elle mourut</term>. On l'enterra dans <placeName ref="#eglise">l'église</placeName>. La <term ref="#nuit">nuit</term> suivante, le gardien de <placeName ref="#eglise">l'église</placeName> vit par <term ref="#revelation">révélation</term> qu'elle était traînée devant le saint <placeName ref="#autel">autel</placeName> et coupée en deux : <term ref="#Destruction_corps">une partie brûlait</term>, l'autre restait intacte.
+                 Au matin, il conta la chose aux frères et voulut leur montrer l'endroit où elle avait brûlé. Des traces de feu apparurent sur le marbre devant <placeName ref="#autel">l'autel</placeName>, comme si cette femme avait été grillée à cet endroit par un feu matériel.
+                 Cela montre, clair comme le jour, que ceux qui n'ont pas obtenu pardon pour leurs péchés ne sauraient trouver dans les lieux sacrés un secours posthume pour échapper au jugement.
+              </p>
+           </div>
+           <div>
+              <head>Collectio exemplorum cisterciensis</head>
+              <p>
+                 Sur les <term ref="#Dialogues">Dialogues</term> de <persName ref="#Gregoire">Grégoire</persName>. Une certaine sainte religieuse, ayant en effet une certaine <term ref="#sexualite">retenue dans sa chair</term>, ne refusait pas avec sa langue l'insolence et la sottise. 
+                 <term ref="#defunctum">Elle mourut</term> donc et fut enterrée dans <placeName ref="#eglise">l'église</placeName>. La même <term ref="#nuit">nuit</term>, le gardien de la même <placeName ref="#eglise">église</placeName> vit par <term ref="#revelation">révélation</term> qu'elle avait été emmenée devant <placeName ref="#autel">l'autel</placeName> sacré et qu’elle fut coupé en deux. 
+                 Une partie a <term ref="#Destruction_corps">été brûlée</term> par le feu, mais l’autre partie est restée intacte. La brûlure de la <term ref="#feu">flamme</term> apparaissait ainsi devant <placeName ref="#autel">l'autel</placeName> sur les marbres. comme si là la même femme avait été brûlée corporellement par le <term ref="#feu">feu</term>.
+              </p>
+           </div>
+           <div>
+              <head>Sermones vulgares</head>
+              <p>
+                 <persName ref="#Gregoire">Grégoire</persName> raconte qu'une certaine <term ref="#sexualite">vierge</term>, qui avait été fière et bavarde. Lorsqu'elle fut morte et enterrée, le gardien du <placeName ref="#monastere">monastère</placeName> vit la <term ref="#nuit">nuit</term> les démons la sortir du tombeau. 
+                 Ceux au-dessus des reins ont <term ref="#Destruction_corps">brûlé</term> son corps, les reins en dessous sont restés intacts, de sorte que le matin, il y avait des cendres sur le sol et des traces de brûlure. 
+                 Il est donc clair que la <term ref="#sexualite">virginité</term> sans humilité est comme des lampes sans huile. Enlevez l'huile, les lampes ne brillent pas, enlevez l'humilité, la chasteté ne plaît pas.
+              </p>
+           </div>
+           <div>
+              <head>Fabulae et Parabolae</head>
+              <p>
+                 Une certaine religieuse très querelleuse de son vivant après sa mort, elle fut enterrée dans une <placeName ref="#eglise">église</placeName>. La <term ref="#nuit">nuit</term> suivante, le gardien de <placeName ref="#eglise">l'église</placeName>, par <term ref="#revelation">révélation</term>, la vit à moitié sèche devant <placeName ref="#autel">l'autel</placeName>.  
+                 La partie médiane a été <term ref="#Destruction_corps">brûlée</term> par le <term ref="#feu">feu</term>, l'autre partie est restée intacte.  Lorsque le gardien de <placeName ref="#eglise">l'église</placeName> raconta cela le lendemain et montra l'endroit où se trouvait la <term ref="#feu">flamme</term>, elle parut brûlée comme si elle avait été brûlée par un <term ref="#feu">feu</term> matériel.
+              </p>
+           </div>
+           <div>
+              <head>Dialogus_miraculorum</head>
+              <p>
+                 Je vais vous raconter une chose terrible qui s'est produite lorsque j'étais dans mon village.
+                 Il y avait une certaine fille de bonne naissance, fille d'un homme riche, mais si colérique, si querelleuse et bruyante, que partout où elle se trouvait, que ce soit dans la maison ou dans <placeName ref="#eglise">l'église</placeName>, elle attisait les querelles, entretenait les haines et  et se considérerait bienheureux qui pourrait échapper au fléau de cette langue.
+                 Enfin <term ref="#defunctum">elle mourut</term> et fut enterrée dans la cour de <placeName ref="#eglise">l'église</placeName>.Lorsque nous sommes arrivés à <placeName ref="#eglise">l'église</placeName> le matin, nous avons vu son tombeau cracher de la fumée comme une fournaise. Alors, terrifiés et désireux de voir ce que cela signifiait, nous poussâmes le sol, 
+                 et voici, le <term ref="#feu">feu</term> avait <term ref="#Destruction_corps">consumé</term> la moitié supérieure du corps mais la partie inférieure paraissait indemne à partir du nombril.
+              </p>
+           </div>
+        </div>
+     </back>
+  </text>
+</TEI>
